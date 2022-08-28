@@ -22,6 +22,16 @@
   }
 }
 
+.likes__button:hover {
+  background: url("../img/icons/icon-like-button-hover.svg");
+  background-repeat: no-repeat;
+
+  @include desctop {
+    background: url("../img/icons/icon-like-active.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .likes__button--click {
   background: url("../img/icons/icon-like-active.svg");
   background-repeat: no-repeat;

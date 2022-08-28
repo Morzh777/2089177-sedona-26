@@ -4,27 +4,43 @@
 }
 
 .content__img {
+  @include retina {
+    height: 389px;
+    background: url("../img/welcome-triangle.svg"), url("../img/mobile-header-welcome@2x.jpg");
+
+    @include haider-img-position;
+    padding-top: 90px;
+  }
+
   height: 389px;
   background: url("../img/welcome-triangle.svg"), url("../img/mobile-header-welcome.jpg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 100%;
+
+  @include haider-img-position;
   padding-top: 90px;
 
   @include tablet {
+    @include retina {
+      height: 518px;
+      background: url("../img/welcome-triangle.svg"), url("../img/tablet-header-welcome@2x.jpg");
+
+      @include haider-img-position;
+    }
+
     height: 518px;
     background: url("../img/welcome-triangle.svg"), url("../img/tablet-header-welcome.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 100%;
+
+    @include haider-img-position;
   }
 
   @include desctop {
-    height: 518px;
+    @include retina {
+      background: url("../img/welcome-triangle.svg"), url("../img/desctop-header-welcome@2x.jpg");
+
+      @include haider-img-position;
+    }
     background: url("../img/welcome-triangle.svg"), url("../img/desctop-header-welcome.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 100%;
+
+    @include haider-img-position;
   }
 }
 
@@ -44,26 +60,42 @@
 }
 
 .content__img--position {
+  @include retina {
+    height: 158px;
+    background: url("../img/welcome-triangle.svg"), url("../img/mobile-header-welcome-gallery@2x.jpg");
+
+    @include haider-img-position;
+  }
+
   height: 158px;
   background: url("../img/welcome-triangle.svg"), url("../img/mobile-header-welcome-gallery.jpg");
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 100%;
+
+  @include haider-img-position;
   padding-top: 52px;
 
   @include tablet {
+    @include retina {
+      height: 290px;
+      background: url("../img/welcome-triangle.svg"), url("../img/tablet-header-welcome@2x.jpg");
+
+      @include haider-img-position;
+    }
     height: 290px;
     background: url("../img/welcome-triangle.svg"), url("../img/tablet-header-welcome.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 100%;
+
+    @include haider-img-position;
   }
 
   @include desctop {
+    @include retina {
+      height: 290px;
+      background: url("../img/welcome-triangle.svg"), url("../img/tablet-header-welcome@2x.jpg");
+
+      @include haider-img-position;
+    }
     height: 290px;
     background: url("../img/welcome-triangle.svg"), url("../img/desctop-header-welcome.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 100%;
+
+    @include haider-img-position;
   }
 }

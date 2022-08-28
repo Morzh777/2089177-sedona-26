@@ -158,9 +158,12 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  cursor: none;
 }
 
 .form__label {
+  display: block;
+  position: relative;
   font-weight: normal;
   font-size: $mobile-font-subtitle;
   line-height: $mobile-height-subtitle;
@@ -170,18 +173,20 @@
 
 .form__input {
   font-family: "PT Sans", sans-serif;
-  min-height: 54px;
+  min-height: 58px;
   background-color: $gray;
   padding-left: 16px;
   font-weight: bold;
   font-size: $mobile-font-title;
   line-height: $mobile-height-title;
   border: 4px solid $gray;
+  outline: none;
 }
 
 .form__input:hover {
   background-color: $gray-400;
   border: 4px solid $gray-400;
+  outline: none;
 }
 
 .form__input:active {
@@ -190,18 +195,28 @@
   outline: none;
 }
 
-.form__input--icon-telephone {
-  background-image: url("../img/icons/icon-phone.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+.form__label--icon-telephone::after {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 58px;
+  top: 100%;
+  right: 0;
+  background-image: url("../img/icons/icon-phone.svg");
   background-repeat: no-repeat;
-  background-position: right 20px top 50%, 0 0;
-  padding-right: 58px;
+
 }
 
-.form__input--icon-mail {
-  background-image: url("../img/icons/icon-mail.svg"), linear-gradient(to left, #e6e6e6 58px, transparent 58px);
+.form__label--icon-mail::after {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 58px;
+  top: 100%;
+  right: 0;
+  background-image: url("../img/icons/icon-mail.svg");
   background-repeat: no-repeat;
-  background-position: right 20px top 50%, 0 0;
-  padding-right: 58px;
+
 }
 
 .form__list {
@@ -214,17 +229,24 @@
   font-family: "PT Sans", sans-serif;
   width: 100%;
   background-color: $gray;
-  border: none;
   margin-top: 20px;
   padding: 14px 21px 15px 21px;
   font-weight: bold;
   font-size: $mobile-font-title;
   line-height: $mobile-height-title;
   resize: none;
+  border: 4px solid $gray;
+  outline: none;
 }
 
 .form__textarea:hover {
   background-color: $gray-400;
+  border: 4px solid $gray-400;
+}
+
+.form__textarea:active {
+  background-color: inherit;
+  border: 4px solid $gray-400;
 }
 
 .form__button {

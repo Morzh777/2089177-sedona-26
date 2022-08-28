@@ -12,19 +12,22 @@
 }
 
 .copyright__item {
-
   padding: 10px 10px 10px 10px;
 }
 
-.copyright:hover path,
-.copyright__item:hover {
+.copyright:hover .copyright__item {
   color: $blue;
+}
+
+.copyright:hover .copyright__logo {
   fill: $blue;
 }
 
-.copyright:active svg,
-.copyright__item:active {
+.copyright:active .copyright__item {
   opacity: 0.3;
   color: $gray-50;
+}
+
+.copyright:active .copyright__logo {
   fill: $gray-50;
 }

@@ -2,10 +2,10 @@
 .checkbox {
   display: flex;
   flex-direction: row;
-  cursor: pointer;
   padding-top: 17px;
   padding-bottom: 17px;
   align-items: center;
+  cursor: auto;
 }
 
 .checkbox__input {
@@ -17,6 +17,7 @@
 }
 
 .checkbox__subtitle {
+  cursor: pointer;
   position: relative;
   text-transform: none;
   font-weight: bold;

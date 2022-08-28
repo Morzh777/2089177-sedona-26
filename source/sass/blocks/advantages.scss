@@ -37,30 +37,52 @@
 }
 
 .advantages__item--img:nth-child(1)::after {
+  @include retina {
+    height: 260px;
+    background-image: url("../img/photo-city-mobile@2x.jpg");
+  }
+
   height: 260px;
   background-image: url("../img/photo-city-mobile.jpg");
 
+
   @include tablet {
+    @include retina {
+      background-image: url("../img/photo-city-tablet@2x.jpg");
+      order: 1;
+    }
     background-image: url("../img/photo-city-tablet.jpg");
     order: 1;
   }
 
   @include desctop {
+    @include retina {
+      background-image: url("../img/photo-city-desctop@2x.jpg");
+    }
     background-image: url("../img/photo-city-desctop.jpg");
   }
 }
 
 .advantages__item--img:nth-child(2)::after {
+  @include retina {
+    background-image: url("../img/photo-brige-mobile@2x.jpg");
+  }
   height: 260px;
   background-image: url("../img/photo-brige-mobile.jpg");
 
   @include tablet {
-
+    @include retina {
+      background-image: url("../img/photo-brige-tablet@2x.jpg");
+      order: -1;
+    }
     background-image: url("../img/photo-brige-tablet.jpg");
     order: -1;
   }
 
   @include desctop {
+    @include retina {
+      background-image: url("../img/photo-brige-desctop@2x.jpg");
+    }
     background-image: url("../img/photo-brige-desctop.jpg");
   }
 }
