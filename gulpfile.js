@@ -11,6 +11,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
+import htmlmin  from 'gulp-htmlmin';
 
 // Styles
 export const styles = () => {
@@ -29,6 +30,7 @@ export const styles = () => {
 
   const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
   }
 
@@ -36,8 +38,8 @@ export const styles = () => {
 
   const scripts = () => {
   return gulp.src('source/js/*.js')
+  .pipe(terser())
   .pipe(gulp.dest('build/js'))
-  .pipe(browser.stream());
   }
 
   // Images
